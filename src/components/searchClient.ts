@@ -1,5 +1,7 @@
 import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 
+const attributes = ["release_date", "id", "title", "genres"];
+
 export function searchClient (url: string, token: string) {
   const { searchClient } =  instantMeiliSearch(url, token, {
     primaryKey: "id",
@@ -7,7 +9,7 @@ export function searchClient (url: string, token: string) {
     keepZeroFacets: true,
     meiliSearchParams: {
       attributesToHighlight: ["*"],
-      attributesToRetrieve: ["folder_id", "id"],
+      attributesToRetrieve: attributes,
       // attributesToSnippet: ["content"]
     }
     // rankingRules: ["exactness", "attribute", "sort"]

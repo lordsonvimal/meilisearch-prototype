@@ -1,14 +1,17 @@
 import React from "react";
 import { FacetedSearch } from "./components/FacetedSearch";
+import meiliSearchData from "./meiliSearch.json";
+import "./stylesheets/global.scss";
+import "./stylesheets/faceted-search.scss";
 
-const indexName = "";
-const token = "";
-const url = "";
+const indexName = meiliSearchData.indexName;
+const token = meiliSearchData.token;
+const url = meiliSearchData.url;
 
 export function App() {
   return (
     <>
-      <h1>Meilisearch prototype</h1>
+      <h1>Movies search</h1>
       <FacetedSearch indexName={indexName} searchToken={token} searchUrl={url} />
     </>
   );

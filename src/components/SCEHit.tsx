@@ -20,20 +20,18 @@ export function SCEHit({ hit }: Props) {
     <>
       <div className="hit-description">
         <b>
-          <Highlight attribute="file_name" hit={hit} />
+          <Highlight attribute="title" hit={hit} />
         </b>
       </div>
       <div className="hit-path">
-        <Highlight attribute="path" hit={hit} />
+        <Highlight attribute="genres" hit={hit} />
       </div>
-      <div className="hit-updated">
-        {label("Updated")}
+      {/* <div className="hit-updated">
         {hit.updated_at}
-      </div>
+      </div> */}
       <div className="hit-content">
-        {label("contents")}
         <div className="hit-content-texts">
-          <Snippet attribute="content" hit={hit} />
+          <Snippet attribute="overview" hit={hit} />
         </div>
       </div>
     </>
