@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "index": "node ./src/backend/main.mjs"
+    "index": "node ./src/backend/main.mjs",
+    "semantic": "node ./src/backend/semanticSearch.mjs"
   },
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.19.0",
