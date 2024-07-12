@@ -10,6 +10,11 @@ export function searchClient (url: string, token: string) {
     meiliSearchParams: {
       attributesToHighlight: ["*"],
       attributesToRetrieve: attributes,
+      showRankingScore: true,
+      hybrid: {
+        embedder: "default",
+        semanticRatio: 1
+      }
       // attributesToSnippet: ["content"]
     }
     // rankingRules: ["exactness", "attribute", "sort"]

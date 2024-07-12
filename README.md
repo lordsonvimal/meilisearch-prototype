@@ -28,6 +28,10 @@ docker run -d --net=host -v ollama:/root/.ollama -p 11434:11434 --name ollama ol
 docker exec -it ollama ollama run llama3
 ```
 
+```
+launchctl setenv OLLAMA_HOST "0.0.0.0"
+```
+
 ### Update semantic search embedders in meilisearch to use Ollama
 Get the ip address of the ollama host (LOCALHOST for now) and update in `semanticSearch.mjs`
 
