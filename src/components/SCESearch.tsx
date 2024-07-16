@@ -14,7 +14,7 @@ export function SCESearch({ indexName, searchUrl, searchToken }: SearchProps) {
   return (
     <InstantSearch indexName={indexName} routing={true} searchClient={searchClient(searchUrl, searchToken)}>
       {/* <Configure attributeToHighlight={["*"]} attributesToRetrieve={["folder_id", "id"]} attributesToSnippet={["content"]} /> */}
-      {/* <Configure index="" /> */}
+      {/* <Configure /> */}
       <div className="faceted_search--container">
         <div className="faceted_search--filters">
           <Panel header="Genres">

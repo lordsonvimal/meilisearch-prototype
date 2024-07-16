@@ -56,3 +56,18 @@ yarn start
 
 The meilisearch server can be accessed via `http://0.0.0.0:7700/`
 The web app can be accessed via `http://localhost:5173/`
+
+
+### Python venv
+pyenv install 3.9.7
+pyenv virtualenv 3.9.7 semantic_search
+pyenv local semantic_search
+pip install -r requirements.txt
+
+Other approach:
+python3.9 -m venv semantic-search
+source env/bin/activate
+pip list
+pip freeze > requirements.txt
+pip install -r requirements.txt
+deactivate

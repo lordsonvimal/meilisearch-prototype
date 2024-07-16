@@ -9,9 +9,10 @@ const client = new Meilisearch({
   apiKey: token
 });
 
-client.index(indexName).addDocuments(movies).then((res) => console.log(res));
+// client.cancelTasks({ uids: [45] });
+client.index(indexName).deleteAllDocuments().then(res => console.log(res));
+client.index(indexName).addDocuments(movies.splice(0, 10)).then((res) => console.log(res));
 
-const filterableAttributes = client.index(indexName).getFilterableAttributes();
-console.log(filterableAttributes);
+client.index(indexName).updateFilterableAttributes(["genres", "_rankingScore"]);
 
-client.index(indexName).updateFilterableAttributes(["genres"]);
+const filterableAttributes = client.index(indexName).getFilterableAttributes().then(res => console.log(res));
