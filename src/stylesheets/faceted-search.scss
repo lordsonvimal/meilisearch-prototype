@@ -4,9 +4,14 @@ $base-space: 10px;
 .faceted_search-title {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 32px;
+
+  h1 {
+    width: 285px;
+  }
 }
 
+.faceted_search-modes,
 .slider {
   align-items: center;
   cursor: pointer;
