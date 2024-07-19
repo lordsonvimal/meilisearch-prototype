@@ -1,6 +1,6 @@
 import React from "react";
-import { searchClient } from "./searchClient";
-import { Configure, CurrentRefinements, InstantSearch, Menu, Pagination, SearchBox, Stats } from "react-instantsearch";
+import { searchClient, SearchClientOptions } from "./searchClient";
+import { CurrentRefinements, InstantSearch, Menu, Pagination, SearchBox, Stats } from "react-instantsearch";
 import { Panel } from "./Panel";
 import { SCEHits } from "./SCEHits";
 
@@ -10,11 +10,9 @@ export type SearchProps = {
   searchUrl: string
 };
 
-export function SCESearch({ indexName, searchUrl, searchToken }: SearchProps) {
+export function SCESearch({ indexName, options, searchUrl, searchToken }: SearchProps & { options: SearchClientOptions }) {
   return (
-    <InstantSearch indexName={indexName} routing={true} searchClient={searchClient(searchUrl, searchToken)}>
-      {/* <Configure attributeToHighlight={["*"]} attributesToRetrieve={["folder_id", "id"]} attributesToSnippet={["content"]} /> */}
-      {/* <Configure /> */}
+    <InstantSearch indexName={indexName} routing={true} searchClient={searchClient(searchUrl, searchToken, options)}>
       <div className="faceted_search--container">
         <div className="faceted_search--filters">
           <Panel header="Genres">

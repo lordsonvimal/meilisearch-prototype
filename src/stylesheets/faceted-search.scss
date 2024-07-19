@@ -1,6 +1,35 @@
 /* stylelint-disable */
 $base-space: 10px;
 
+.faceted_search-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+}
+
+.btn-search-mode {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #8f9092;
+  padding: 4px 6px;
+
+  &:hover,
+  &.btn-search-mode--selected {
+    background-color: #0075ff;
+    border-color: #0075ff;
+    color: white;
+  }
+}
+
 .faceted_search--container {
   display: grid;
   align-items: flex-start;
@@ -100,10 +129,12 @@ $base-space: 10px;
 }
 
 .ais-Hits-item {
+  border-bottom: 1px solid #dedede;
+  color: #5a5a5a;
+  display: flex;
+  gap: 8px;
   overflow: hidden;
   padding: 6px;
-  color: #5a5a5a;
-  border-bottom: 1px solid #dedede;
 }
 
 .ais-ClearRefinements-button,
@@ -352,7 +383,7 @@ a[class^=ais-] {
 .ais-Menu-link,
 .ais-Pagination-link,
 .ais-RatingMenu-link {
-  color: #0096db;
+  color: #0075ff;
   transition: color 0.2s ease-out;
 }
 .ais-Breadcrumb-link:hover, .ais-Breadcrumb-link:focus,
@@ -381,7 +412,7 @@ a[class^=ais-] {
   padding: 0.3rem 0.5rem;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #0096db;
+  background-color: #0075ff;
   border-radius: 5px;
   transition: background-color 0.2s ease-out;
   outline: none;
@@ -436,7 +467,7 @@ a[class^=ais-] {
 .ais-Menu-showMore--disabled:focus,
 .ais-RefinementList-showMore--disabled:hover,
 .ais-RefinementList-showMore--disabled:focus {
-  background-color: #0096db;
+  background-color: #0075ff;
 }
 
 .ais-InfiniteHits-loadPrevious--disabled {
@@ -690,7 +721,7 @@ a[class^=ais-] {
   line-height: 1.5rem;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #0096db;
+  background-color: #0075ff;
   border: none;
   border-radius: 5px;
   transition: 0.2s ease-out;
@@ -733,8 +764,8 @@ a[class^=ais-] {
 }
 .ais-Pagination-item--selected .ais-Pagination-link {
   color: #fff;
-  background-color: #0096db;
-  border-color: #0096db;
+  background-color: #0075ff;
+  border-color: #0075ff;
 }
 .ais-Pagination-item--selected .ais-Pagination-link:hover, .ais-Pagination-item--selected .ais-Pagination-link:focus {
   color: #fff;

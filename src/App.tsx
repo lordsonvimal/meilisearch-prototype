@@ -11,7 +11,6 @@ const url = meiliSearchData.url;
 export function App() {
   return (
     <>
-      <h1>Movies search</h1>
       <FacetedSearch indexName={indexName} searchToken={token} searchUrl={url} />
     </>
   );
