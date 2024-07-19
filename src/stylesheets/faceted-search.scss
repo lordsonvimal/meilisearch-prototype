@@ -44,7 +44,7 @@ $base-space: 10px;
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
-  background: #f1f4f8;
+  background: #eaeef3;
   padding: 4px 8px;
   border-radius: 3px;
 }
@@ -355,10 +355,24 @@ a[class^=ais-] {
   color: rgb(58, 69, 112);
 }
 
+.ais-Menu-item {
+  padding: 4px;
+
+  &:hover {
+    background-color: #0075ff;
+    border-radius: 3px;
+    color: white;
+
+    .ais-Menu-link {
+      color: white;
+    }
+  }
+}
+
 .ais-Breadcrumb-item--selected,
 .ais-HierarchicalMenu-item--selected,
 .ais-Menu-item--selected {
-  background-color: #3a4570;
+  background-color: #0075ff;
   font-weight: bold;
   padding: 4px;
   border-radius: 3px;
@@ -383,8 +397,8 @@ a[class^=ais-] {
 .ais-Menu-link,
 .ais-Pagination-link,
 .ais-RatingMenu-link {
-  color: #0075ff;
-  transition: color 0.2s ease-out;
+  color: #596a7d;
+  transition: color 0.2s ease-in-out;
 }
 .ais-Breadcrumb-link:hover, .ais-Breadcrumb-link:focus,
 .ais-HierarchicalMenu-link:hover,
@@ -488,8 +502,9 @@ a[class^=ais-] {
 .ais-CurrentRefinements-item {
   padding: 0.3rem 0.5rem;
   display: flex;
-  background-color: rgb(73, 85, 136);
+  background-color: #0075ff;
   border-radius: 5px;
+  font-weight: bold;
   gap: 4px;
 }
 

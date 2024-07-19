@@ -10,7 +10,7 @@ export function FacetedSearch(props: SearchProps) {
   return (
     <>
       <div className="faceted_search-title">
-        <h1>Movies search</h1>
+        <h1>Search movies</h1>
         <div className="slider"><input type="range" min={0} max={1} onChange={(e) => {
           setSemanticRatio(parseFloat(e.target.value))
         }} step={0.1} value={semanticRatio} />{semanticRatio}</div>
