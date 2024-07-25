@@ -7,7 +7,7 @@ $base-space: 10px;
   gap: 32px;
 
   h1 {
-    width: 285px;
+    width: 385px;
   }
 }
 
@@ -38,7 +38,7 @@ $base-space: 10px;
 .faceted_search--container {
   display: grid;
   align-items: flex-start;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 400px 1fr;
   gap: 0.5rem;
   height: calc(100% - 50px);
   overflow: hidden;
@@ -50,6 +50,7 @@ $base-space: 10px;
   height: 100%;
   overflow-y: auto;
   background: #eaeef3;
+  gap: 16px;
   padding: 4px 8px;
   border-radius: 3px;
 }
@@ -637,9 +638,11 @@ a[class^=ais-] {
   margin-top: 0.5rem;
 }
 
-.ais-Highligh,
-.ais-Highlight-nonHighlighted {
-  font-size: 14px;
+.hit-path {
+  .ais-Highligh,
+  .ais-Highlight-nonHighlighted {
+    font-size: 12px;
+  }
 }
 
 .ais-Highlight-highlighted,
@@ -890,11 +893,13 @@ a[class^=ais-] {
   margin-bottom: 0.5rem;
 }
 
-/*
+
 .ais-Menu-label {
-  // @extend .truncate-text;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
 }
-*/
 
 .ais-SearchBox-form {
   display: block;
@@ -1009,7 +1014,7 @@ a[class^=ais-] {
 
 
 .hit-description {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .hit-path {
@@ -1022,10 +1027,14 @@ a[class^=ais-] {
 
 .hit-content {
   margin-top: 5px;
+
+  b {
+    font-size: 14px;
+  }
 }
 
-/*
 .hit-content-texts {
-
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 8px;
 }
-*/

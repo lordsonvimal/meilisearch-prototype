@@ -15,8 +15,17 @@ export function SCESearch({ indexName, options, searchUrl, searchToken }: Search
     <InstantSearch indexName={indexName} routing={true} searchClient={searchClient(searchUrl, searchToken, options)}>
       <div className="faceted_search--container">
         <div className="faceted_search--filters">
-          <Panel header="Genres">
-            <Menu attribute="genres" />
+          <Panel header="Organization">
+            <Menu attribute="organization_name" />
+          </Panel>
+          <Panel header="Phases">
+            <Menu attribute="phases" />
+          </Panel>
+          <Panel header="Conditions">
+            <Menu attribute="conditions" />
+          </Panel>
+          <Panel header="Lead Sponsor">
+            <Menu attribute="lead_sponsor" />
           </Panel>
         </div>
         <div className="faceted_search--search">

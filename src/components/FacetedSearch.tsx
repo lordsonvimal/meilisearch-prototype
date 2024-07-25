@@ -10,7 +10,7 @@ export function FacetedSearch(props: SearchProps) {
   return (
     <>
       <div className="faceted_search-title">
-        <h1>Search movies</h1>
+        <h1>Search studies</h1>
         <div className="slider">
           <div>Semantic %</div>
           <input type="range" min={0} max={1} onChange={(e) => setSemanticRatio(parseFloat(e.target.value))} step={0.1} value={semanticRatio} />{semanticRatio * 100}%
@@ -22,7 +22,7 @@ export function FacetedSearch(props: SearchProps) {
         </div>
       </div>
       {!isSearchConfigured && <h5>Please configure the Search Engine properties to enable searching.</h5>}
-      {isSearchConfigured && <SearchProto {...props} options={{ embedder, semanticRatio }} />}
+      {isSearchConfigured && <SearchProto {...props} options={{ embedder, semanticRatio }} indexName="ct_studies_50" />}
     </>
   );
 }

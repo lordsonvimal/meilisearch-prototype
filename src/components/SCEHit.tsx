@@ -15,6 +15,8 @@ function label(txt: string) {
 /* eslint react/no-multi-comp:0 */
 /* eslint react/prop-types:0 */
 export function SCEHit({ hit }: Props) {
+  console.log(hit);
+  
   return (
     <>
       <div>
@@ -27,11 +29,20 @@ export function SCEHit({ hit }: Props) {
           </b>
         </div>
         <div className="hit-path">
-          <Highlight attribute="genres" hit={hit} />
+          <Highlight attribute="organization_name" hit={hit} />&nbsp;|&nbsp;
+          {hit.organization_name !== hit.lead_sponsor && <><Highlight attribute="lead_sponsor" hit={hit} />&nbsp;|&nbsp;</>}
+          <Highlight attribute="conditions" hit={hit} />&nbsp;|&nbsp;
+          <Highlight attribute="phases" hit={hit} />&nbsp;|&nbsp;
+          <span className="ais-Highlight"><span className="ais-Highlight-nonHighlighted">Semantic score: {hit._rankingScore}</span></span>
         </div>
         <div className="hit-content">
           <div className="hit-content-texts">
-            <Snippet attribute="overview" hit={hit} />
+            <b>Summary:</b>&nbsp;
+            <Snippet attribute="summary" hit={hit} />
+          </div>
+          <div className="hit-content-texts">
+            <b>Eligibility Criteria:</b>&nbsp;
+            <Snippet attribute="eligibility_criteria" hit={hit} />
           </div>
         </div>
       </div>
