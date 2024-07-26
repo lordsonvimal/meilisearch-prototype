@@ -25,6 +25,7 @@ export function SCEHit({ hit }: Props) {
       <div>
         <div className="hit-description">
           <b>
+            <Highlight attribute="id" hit={hit} />:&nbsp;
             <Highlight attribute="title" hit={hit} />
           </b>
         </div>
@@ -43,6 +44,22 @@ export function SCEHit({ hit }: Props) {
           <div className="hit-content-texts">
             <b>Eligibility Criteria:</b>&nbsp;
             <Snippet attribute="eligibility_criteria" hit={hit} />
+          </div>
+          <div className="hit-content-texts">
+            <b>Primary Outcomes:</b>&nbsp;
+            <Snippet attribute="primary_outcomes" hit={hit} />
+          </div>
+          <div className="hit-content-texts">
+            <b>Secondary Outcomes:</b>&nbsp;
+            <Snippet attribute="secondary_outcomes" hit={hit} />
+          </div>
+          <div className="hit-content-texts">
+            <b>Interventions:</b>&nbsp;
+            <Snippet attribute="interventions" hit={hit} />
+          </div>
+          <div className="hit-content-texts">
+            <b>Intervention types:</b>&nbsp;
+            <Snippet attribute="intervention_types" hit={hit} />
           </div>
         </div>
       </div>
